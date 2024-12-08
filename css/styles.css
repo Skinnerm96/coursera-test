@@ -1,0 +1,147 @@
+/* General styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 { 
+
+margin-bottom: 15px; 
+text-align: center;
+font-size: 1.75em; 
+
+}
+
+/* Custom styles for the navbar */
+.navbar-custom {
+  background-color: #f8f8f8;
+  border-bottom: 2px solid #ddd;
+}
+
+#header-nav { 
+  margin-bottom: 15px; 
+  text-align: center;
+  font-size: 1.75em; 
+}
+
+/* My Food LLC styling */ 
+.food-llc { 
+  font-size: 1.8em; /* Adjust font size as needed */ 
+  font-weight: bold;
+  margin-right: 15px; /* Adjust margin for indent */
+  padding-left: 30px; 
+  line-height: 50px; /* Adjust for vertical alignment */
+  display: inline-block;
+}
+
+
+p {
+  border: 5px solid black;
+  background-color: lightgray; 
+  margin: 20px auto;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  color: black;
+  position: relative;
+  padding: 25px 10px 10px 20px; /* Added padding-left to avoid text touching the left border */
+  overflow: auto; /* Handles overflow content */
+  word-wrap: break-word; 
+  height: auto; /* Let the height adjust based on content */
+}
+
+.highlight { 
+  position: absolute; 
+  top: 5px; 
+  right: 5px; 
+  padding: 5px 5px; 
+  border: 1px solid black;
+  font-size: 1.25em;
+}
+
+#chicken .highlight {
+  background-color: orangered;
+  color: black;
+}
+#beef .highlight {
+  background-color: lightgreen;
+  color: black;
+}
+#sushi .highlight {
+  background-color: gold;
+  color: black;
+}
+
+
+/* Ensure full width and add spacing for large devices */ 
+@media (min-width: 1200px) { 
+  .container-fluid { 
+    padding-left: 0; 
+    padding-right: 0; 
+  }
+
+  .row { 
+    margin: 0; 
+  } 
+
+  .col-lg-4 { 
+    padding-left: 15px; /* Add left padding */ 
+    padding-right: 15px; /* Add right padding */
+
+  } .col-lg-4 p { 
+    width: calc(100% - 30px); /* Adjust width considering padding */ 
+    margin: 15px 0; /* Add top and bottom margin */ 
+  } 
+} 
+
+/* Dropdown alignment for mobile */ 
+@media (max-width: 767px) { 
+  .navbar-toggle { 
+    float: right; 
+    margin-right: 15px; 
+    background-color: #f8f9fa; /* Add a background color for visibility */ 
+    border: 2px solid #ddd; /* Add border for visibility */ 
+    padding: 10px; /* Add padding for better visibility */ 
+  } 
+
+  .navbar-collapse { 
+    background-color: #f8f9fa; 
+  } 
+
+  .navbar-nav.visible-xs { 
+    display: block; /* Ensure the dropdown is visible on small screens */ 
+  }
+
+  .navbar-nav.visible-xs > li > a { 
+    text-align: center; 
+    padding: 15px; 
+    border-bottom: 1px solid #ddd; 
+  }
+
+  .navbar-nav.visible-xs > li:last-child > a { 
+    border-bottom: none; 
+  } 
+} 
+
+/* Hide the dropdown items on larger screens */ 
+@media (min-width: 768px) { 
+  .navbar-nav.visible-xs { 
+    display: none; 
+    /* Hide on larger screens */ 
+  } 
+} 
+
+/* Back-to-top links */ 
+.back-to-top { 
+  display: none; 
+} 
+
+@media (max-width: 991px) { 
+  .back-to-top { 
+    display: block; 
+    text-align: center; 
+    margin-top: 10px; 
+    color: #007bff; 
+    /* Set your desired color */ 
+  } 
+}
